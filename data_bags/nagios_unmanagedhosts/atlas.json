@@ -1,0 +1,6 @@
+{
+  "address": "localhost",
+  "hostgroups": ["atlas"],
+  "id": "atlas",
+  "notifications": 1
+}
