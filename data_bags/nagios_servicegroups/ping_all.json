@@ -1,0 +1,5 @@
+{
+  "id": "pingme",
+  "hostgroup_name": "all",
+  "use_existing_command": "check-host-alive"
+}
