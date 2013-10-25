@@ -12,5 +12,5 @@ bin/*
 .bundle/*
 
 # data bags
-data_bags
+data_bags/users
 
