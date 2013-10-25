@@ -20,6 +20,7 @@ Vagrant.configure("2") do |config|
   # any other machines on the same network, but cannot be accessed (through this
   # network interface) by any external networks.
   config.vm.network :private_network, ip: "33.33.33.10"
+  config.vm.network :forwarded_port, guest: 80, host: 9000 
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -71,6 +72,7 @@ Vagrant.configure("2") do |config|
     chef.chef_server_url = "http://chef.odd-e.com:4000/"
     chef.validation_key_path = "#{ENV['HOME']}/.chef/validation.pem"
     chef.add_recipe "atlas"
+    chef.add_role "monitoring"
   end
 
 #  config.vm.provision :chef_solo do |chef|
